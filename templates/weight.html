@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convert Length</title>
+  </head>
+  <body>
+    <h1>Convert Length</h1>
+    <form method="POST" action="/convert-length">
+      <label for="value">Value:</label>
+      <input type="number" id="value" name="value" required />
+
+      <label for="from-unit">From:</label>
+      <select id="from-unit" name="from_unit" required>
+        <option value="milligram">Milligram</option>
+        <option value="gram">Gram</option>
+        <option value="kilogram">Kilogram</option>
+        <option value="ounce">Ounce</option>
+        <option value="pound">Pound</option>
+      </select>
+
+      <label for="to-unit">To:</label>
+      <select id="to-unit" name="to_unit" required>
+        <option value="milligram">Milligram</option>
+        <option value="gram">Gram</option>
+        <option value="kilogram">Kilogram</option>
+        <option value="ounce">Ounce</option>
+        <option value="pound">Pound</option>
+      </select>
+
+      <button type="submit">Convert</button>
+    </form>
+    {{if .}}
+    <h2>Result: {{.}}</h2>
+    {{end}}
+  </body>
+</html>
